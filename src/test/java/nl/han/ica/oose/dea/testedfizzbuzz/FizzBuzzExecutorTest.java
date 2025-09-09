@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class FizzBuzzExecutorTest {
 
     private FizzBuzzExecutor sut;
@@ -25,11 +23,20 @@ class FizzBuzzExecutorTest {
     }
 
     @Test
-    void executeWithDivisibleByThree(){
+    void executeWithDivisibleByThreeTest(){
         // Act
         var testValue = sut.execute(9);
 
         // Assert
         Assertions.assertEquals("Fizz", testValue);
+    }
+
+    @Test
+    void executeWithDivisibleByFiveTest(){
+        // Act
+        var testValue = sut.execute(10);
+
+        // Assert
+        Assertions.assertEquals("Buzz", testValue);
     }
 }

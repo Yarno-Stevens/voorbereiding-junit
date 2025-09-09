@@ -39,4 +39,13 @@ class FizzBuzzExecutorTest {
         // Assert
         Assertions.assertEquals("Buzz", testValue);
     }
+
+    @Test
+    void executeWithDivisibleByFiveTeen(){
+        // Act
+        var testValue = sut.execute(15);
+
+        // Assert
+        Assertions.assertEquals("FizzBuzz", testValue);
+    }
 }
